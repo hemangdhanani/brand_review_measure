@@ -133,3 +133,5 @@ dmypy.json
 # .pkl files
 .pkl
 **/*.pkl
+
+SeparatedOutputFiles/
