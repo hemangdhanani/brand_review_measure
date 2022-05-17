@@ -29,6 +29,7 @@ class ClientService:
         for val in self.fileList:
             inputFileTranscriptedOp = generateTranscript(os.path.join(self.FolderPath,val), self.separatedOutputFiles)
         print(inputFileTranscriptedOp)
+        print("11"*50)
         outputResponseObj["inputFileTranscriptedOp"] = inputFileTranscriptedOp
 
         spellCorrectedOpMap = {}
@@ -39,7 +40,9 @@ class ClientService:
             spellCorrectedOpMap[val] = spellcorrectedOp
             # inputFileTranscriptedOp[val] = spellcorrectedOp
         outputResponseObj["spellCorrectedOpMap"] = spellCorrectedOpMap
+        print("22"*50)
         print(inputFileTranscriptedOp)
+       
 
         extractedKeywordMap = {}
         for val in inputFileTranscriptedOp.keys():
@@ -50,7 +53,8 @@ class ClientService:
             result = adding.addkey()
             extractedKeywordMap[val] = result
         outputResponseObj["extractedKeywors"] = extractedKeywordMap
-
+        print("33"*50)
+        print(outputResponseObj)
         return outputResponseObj
 
 
